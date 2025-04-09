@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #e3e4e6;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #444;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .about, .projects, .contact {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 12px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo"><strong>MyPortfolio</strong></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hello, I'm Jane Doe</h1>
+    <p>A passionate Software Developer & Tester.</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a developer with experience in storage validation, automation scripting using Python, and performance testing.
+      I love building clean, efficient, and impactful software. I enjoy debugging tricky issues and writing automation scripts that save time and effort.
+    </p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Samsung Drive Validation</h3>
+        <p>Validated enterprise SSDs for performance, reliability, and compatibility using fio and automation scripts in Python.</p>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Created a personal responsive website using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>Bug Tracker Automation</h3>
+        <p>Automated issue tracking and bug lifecycle using Jira APIs and Python scripts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="event.preventDefault(); alert('Thank you for your message!');">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jane Doe. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
